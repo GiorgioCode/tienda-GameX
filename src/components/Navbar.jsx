@@ -3,9 +3,9 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-slate-900">
+      <div className="navbar bg-slate-900 shadow-xl shadow-red-500 fixed">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl h-20">
+          <a className="btn bg-slate-900 text-xl h-20 border-hidden hover:bg-slate-900">
             <img className="h-20" src="GameX-Logo.png" />
           </a>
         </div>
@@ -14,7 +14,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Buscar"
-              className="input input-bordered bg-slate-600 hover:bg-emerald-900 hover:text-white"
+              className="input input-bordered bg-slate-600 hover:bg-red-500 hover:text-black hover:shadow-lg hover:shadow-red-500"
             />
           </div>
           <div className="dropdown dropdown-end bg-slate-900">
@@ -31,24 +31,42 @@ const Navbar = () => {
               className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-slate-700 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
+                <a
+                  className="hover:bg-red-500 hover:text-black hover:shadow-lg"
+                  href="http://"
+                >
+                  Ver carrito
+                </a>
+              </li>
+              <li>
+                <a
+                  className="justify-between hover:bg-red-500 hover:text-black hover:shadow-lg "
+                  href="http://"
+                >
                   Perfil
                   <span className="badge">Nuevo</span>
                 </a>
               </li>
               <li>
-                <a>Propiedades</a>
+                <a
+                  className="hover:bg-red-500 hover:text-black hover:shadow-lg"
+                  href="http://"
+                >
+                  Propiedades
+                </a>
               </li>
               <li>
-                <a>Cerrar Sesion</a>
+                <a
+                  className="hover:bg-red-500 hover:text-black hover:shadow-lg "
+                  href="http://"
+                >
+                  Cerrar Sesion
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <h1 className="text-2xl text-right bg-black text-orange-600">
-        Hola Mundo
-      </h1>
     </div>
   );
 };
