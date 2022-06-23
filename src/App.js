@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -14,6 +16,7 @@ const App = () => {
       />
       <ItemListContainer />
       <Footer />
+      <ToastContainer />
     </div>
   );
 };
