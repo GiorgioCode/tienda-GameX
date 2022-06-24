@@ -22,7 +22,7 @@ const ItemListContainer = ({ name }) => {
           <img src="./FinalFantasyXIV.png" alt="Imagen" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Final Fantasy XIV</h2>
+          <h2 className="card-title text-white">Final Fantasy XIV</h2>
           <div className="card-actions justify-end">
             <div className="badge badge-outline">Disponibles: 8</div>
           </div>
@@ -34,7 +34,7 @@ const ItemListContainer = ({ name }) => {
           <img src="./GtaV.png" alt="Imagen" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Grand Theft Auto V</h2>
+          <h2 className="card-title text-white">Grand Theft Auto V</h2>
           <div className="card-actions justify-end">
             <div className="badge badge-outline">Disponibles: 9</div>
           </div>
@@ -46,7 +46,7 @@ const ItemListContainer = ({ name }) => {
           <img src="./metalGearSolid.png" alt="Imagen" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Metal Gear Solid 3D</h2>
+          <h2 className="card-title text-white">Metal Gear Solid 3D</h2>
           <div className="card-actions justify-end">
             <div className="badge badge-outline">Disponibles: 0</div>
           </div>
@@ -58,7 +58,7 @@ const ItemListContainer = ({ name }) => {
           <img src="./callofdutyMW2.png" alt="Imagen" />
         </figure>
         <div className="card-body my-0">
-          <h2 className="card-title my-0">Call of Duty MW 2</h2>
+          <h2 className="card-title text-white">Call of Duty MW 2</h2>
           <div className="card-actions justify-end">
             <div className="badge badge-outline">Disponibles: 5</div>
           </div>
