@@ -23,7 +23,9 @@ const Item = ({ games }) => {
       <div className="card-body">
         <h2 className="card-title text-white">{games.nombre}</h2>
         <div className="card-actions justify-end">
-          <div className="badge badge-outline">Disponibles: {games.stock}</div>
+          <div className="text-white badge badge-outline badge-white">
+            Disponibles: {games.stock}
+          </div>
         </div>
         <ItemCount stock={games.stock} initial={1} onAdd={onAdd} />
       </div>

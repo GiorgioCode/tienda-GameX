@@ -2,11 +2,8 @@ import React from "react";
 
 const Dropdown = () => {
   return (
-    <div className="dropdown dropdown-end bg-slate-900">
-      <label
-        tabindex="0"
-        className="btn btn-ghost btn-circle avatar text-black bg-slate-600 hover:bg-red-500 hover:text-black hover:shadow-lg hover:shadow-red-500"
-      >
+    <div tabIndex="0" className="dropdown dropdown-end bg-slate-900">
+      <label className="btn btn-ghost btn-circle avatar text-black bg-slate-600 hover:bg-red-500 hover:text-black hover:shadow-lg hover:shadow-red-500">
         <div className="w-10 rounded-full">
           <img
             src="https://api.lorem.space/image/face?hash=33791"
@@ -14,10 +11,7 @@ const Dropdown = () => {
           />
         </div>
       </label>
-      <ul
-        tabindex="0"
-        className="mt-3 p-2 text-black shadow menu menu-compact dropdown-content bg-slate-600 rounded-box w-52"
-      >
+      <ul className="mt-3 p-2 text-black shadow menu menu-compact dropdown-content bg-slate-600 rounded-box w-52">
         <li>
           <a
             className="justify-between hover:bg-red-500 hover:text-black hover:shadow-lg "

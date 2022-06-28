@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/Footer";
+import Carrousel from "./components/Carrousel";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,6 +15,7 @@ const App = () => {
         greetings="¡Bienvenid@s a Game X !"
         slogan="de Gamers para Gamers"
       />
+      <Carrousel />
       <ItemListContainer />
       <Footer />
       <ToastContainer />
