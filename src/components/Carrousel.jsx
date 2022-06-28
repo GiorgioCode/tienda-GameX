@@ -2,7 +2,7 @@ import React from "react";
 
 const carrousel = () => {
   return (
-    <div className="slide carousel rounded-box w-full">
+    <div className="slide carousel mt-32 rounded-box w-full">
       <div className="carousel-item w-60">
         <img
           alt="portada_juego"
