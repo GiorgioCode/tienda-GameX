@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import LoaderPacman from "./LoaderPacman";
 
 const games = [
   {
@@ -72,7 +71,7 @@ export const ItemListContainer = () => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(games);
-      }, 3000);
+      }, 2000); //segun consigna de filmina (2 segundos de espera)
     });
     getData.then((res) => setData(res));
   }, []);
