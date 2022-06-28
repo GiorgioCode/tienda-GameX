@@ -16,11 +16,11 @@ const Item = ({ games }) => {
     });
   };
   return (
-    <div className="card w-80 m-4 bg-slate-900 shadow-xl inline-block">
+    <div className="card w-72 m-4 bg-slate-900 shadow-xl inline-block">
       <figure>
         <img src={games.imagen} alt="Imagen" />
       </figure>
-      <div className="card-body">
+      <div className="card-body d-flex flex-col align-evenly">
         <h2 className="card-title text-white">{games.nombre}</h2>
         <div className="card-actions justify-end">
           <div className="text-white badge badge-outline badge-white">

@@ -21,7 +21,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   }, [initial]);
 
   return (
-    <div className="m-0 ">
+    <div className="m-0">
       <button
         onClick={handlerResta}
         disabled={cuenta <= 1 || stock <= 0}
