@@ -1,71 +1,88 @@
-import React from "react";
-import ItemCount from "./ItemCount";
-import { toast } from "react-toastify";
+import React, { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import LoaderPacman from "./LoaderPacman";
 
-const ItemListContainer = ({ name }) => {
-  const onAdd = (qty) => {
-    toast.success(`Agregaste ${qty} unidad/es al carrito!!`, {
-      theme: "dark",
-      position: "top-center",
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
+const games = [
+  {
+    id: 1,
+    nombre: "Grand Theft Auto V",
+    precio: 350,
+    imagen:
+      "https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg",
+    stock: 28,
+    categoria: 1,
+    tiempo: 72,
+  },
+  {
+    id: 2,
+    nombre: "The Witcher 3: Wild Hunt",
+    precio: 280,
+    imagen:
+      "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+    stock: 30,
+    categoria: 1,
+    tiempo: 47,
+  },
+  {
+    id: 3,
+    nombre: "Portal 2",
+    precio: 240,
+    imagen:
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:600/h:338/q:75/https://bleedingcool.com/wp-content/uploads/2018/07/Portal-2-glance.jpg",
+    stock: 37,
+    categoria: 1,
+    tiempo: 11,
+  },
+  {
+    id: 4,
+    nombre: "The Elder Scrolls V: Skyrim",
+    precio: 300,
+    imagen:
+      "https://www.hardmaniacos.com/wp-content/uploads/2016/06/The-Elder-Scrolls-V-Skyrim-portada.jpg",
+    stock: 20,
+    categoria: 1,
+    tiempo: 11,
+  },
+  {
+    id: 5,
+    nombre: "BioShock Infinite",
+    precio: 400,
+    imagen:
+      "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+    stock: 17,
+    categoria: 1,
+    tiempo: 12,
+  },
+  {
+    id: 6,
+    nombre: "Life is Strange",
+    precio: 360,
+    imagen:
+      "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg",
+    stock: 37,
+    categoria: 1,
+    tiempo: 7,
+  },
+];
+
+export const ItemListContainer = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getData = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(games);
+      }, 3000);
     });
-  };
+    getData.then((res) => setData(res));
+  }, []);
+
   return (
-    <div className="d-flex inline-flex flex-wrap w-full justify-center">
-      <div className="card m-4 bg-slate-900 shadow-xl inline-block">
-        <figure>
-          <img src="./FinalFantasyXIV.png" alt="Imagen" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-white">Final Fantasy XIV</h2>
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">Disponibles: 8</div>
-          </div>
-          <ItemCount stock={8} initial={1} onAdd={onAdd} />
-        </div>
+    <>
+      <div className="d-flex inline-flex flex-wrap w-full justify-center">
+        <ItemList data={data} />
       </div>
-      <div className="card m-4 bg-slate-900 shadow-xl inline-block">
-        <figure>
-          <img src="./GtaV.png" alt="Imagen" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-white">Grand Theft Auto V</h2>
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">Disponibles: 9</div>
-          </div>
-          <ItemCount stock={9} initial={1} onAdd={onAdd} />
-        </div>
-      </div>
-      <div className="card m-4 bg-slate-900 shadow-xl inline-block">
-        <figure>
-          <img src="./metalGearSolid.png" alt="Imagen" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-white">Metal Gear Solid 3D</h2>
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">Disponibles: 0</div>
-          </div>
-          <ItemCount stock={0} initial={1} onAdd={onAdd} />
-        </div>
-      </div>
-      <div className="card m-4 bg-slate-900 shadow-xl inline-block">
-        <figure>
-          <img src="./callofdutyMW2.png" alt="Imagen" />
-        </figure>
-        <div className="card-body my-0">
-          <h2 className="card-title text-white">Call of Duty MW 2</h2>
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">Disponibles: 5</div>
-          </div>
-          <ItemCount stock={5} initial={1} onAdd={onAdd} />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

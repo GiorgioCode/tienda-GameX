@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [cuenta, setCuenta] = useState(initial);
-
   const handlerSuma = () => {
     if (cuenta < stock) {
       setCuenta(cuenta + 1);
