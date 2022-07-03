@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 import { games } from "./listado";
 import LoaderPacman from "./LoaderPacman";
 
-export const ItemListContainer = () => {
+export const ItemDetailContainer = () => {
   const [data, setData] = useState([]);
   const [cargando, setCargando] = useState(true);
 
@@ -12,7 +12,7 @@ export const ItemListContainer = () => {
       setTimeout(() => {
         setCargando(false);
         resolve(games);
-      }, 3000); //segun consigna de filmina (2 segundos de espera)
+      }, 3000);
     });
     getData.then((res) => setData(res));
   }, []);
@@ -24,8 +24,8 @@ export const ItemListContainer = () => {
     </div>
   ) : (
     <div className="d-flex inline-flex flex-wrap w-full justify-center mt-32">
-      <ItemList data={data} />
+      <ItemDetail data={data[0]} />
     </div>
   );
 };
-export default ItemListContainer;
+export default ItemDetailContainer;

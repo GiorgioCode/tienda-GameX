@@ -1,23 +1,29 @@
 import React from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/Footer";
-import Carrousel from "./components/Carrousel";
+import ItemDetailContainer from "./components/ItemDetailContainer"
+import Cart from "./components/Cart"
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Slider from "./components/Slider";
 
 const App = () => {
   return (
-    <div>
+    <>
+    <BrowserRouter>
       <Navbar />
-
-      <Slider/>
-      <ItemListContainer />
-      <Carrousel />
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/categoria' element={<ItemListContainer />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/detalle' element={<ItemDetailContainer />} />        
+      </Routes>
       <Footer />
       <ToastContainer />
-    </div>
+    </BrowserRouter>
+    </>
+    
   );
 };
 

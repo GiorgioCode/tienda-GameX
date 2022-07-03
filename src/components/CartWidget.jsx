@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const CartWidget = () => {
   return (
@@ -35,9 +36,11 @@ const CartWidget = () => {
             </span>
             <span className="text-info">Subtotal: $999</span>
             <div className="card-actions">
-              <button className="btn bg-slate-900 btn-block hover:bg-red-500 hover:text-black hover:shadow-lg hover:shadow-red-500 hover:border-red-500">
-                Ver Carrito
-              </button>
+              <NavLink to="/cart">
+                <button className="btn bg-slate-900 btn-block hover:bg-red-500 hover:text-black hover:shadow-lg hover:shadow-red-500 hover:border-red-500">
+                  Ver Carrito
+                </button>
+              </NavLink>
             </div>
           </div>
         </div>
