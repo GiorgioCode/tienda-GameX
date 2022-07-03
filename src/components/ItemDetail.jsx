@@ -43,7 +43,7 @@ const ItemDetail = ({ data }) => {
                 value={data.puntuacion}
                 max="100"
               ></progress>
-              {data.puntuacion} puntos
+              {data.puntuacion}
             </div>
             <div className="text-center py-2 text-3xl">
               Disponibles: {data.stock}
@@ -57,8 +57,8 @@ const ItemDetail = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="my-4">
-        <ReactPlayer controls="true" url={data.video} />
+      <div className="my-4 w-full d-flex inline-flex flex-wrap justify-center">
+        <ReactPlayer controls="true" url={data.video} width="100%" />
       </div>
     </>
   );
