@@ -2,9 +2,14 @@ import React from "react";
 
 const Cart = () => {
   return (
-    <div className="d-flex inline-flex flex-wrap w-full justify-center mt-32 h-96">
-      Carrito
-    </div>
+    <>
+      <h1 className="text-center text-3xl mt-32">
+        Lamentablemente, aun no hemos desarrollado el carrito... =)
+      </h1>
+      <div className="d-flex inline-flex flex-wrap w-full justify-center mb-32">
+        <img className="p-3" src="./panda.gif" alt="carrito" srcset="" />
+      </div>
+    </>
   );
 };
 
