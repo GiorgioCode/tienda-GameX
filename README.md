@@ -16,6 +16,12 @@ En este proyecto se ha desarrollado una tienda de videojuegos con capacidad de f
 
 ---
 
+# Paleta de colores:
+
+![Paleta](https://raw.githubusercontent.com/GiorgioCode/tienda-GameX/master/src/paleta-GameX.png)
+
+---
+
 # Demo:
 
 ![Demo](https://raw.githubusercontent.com/GiorgioCode/tienda-GameX/master/src/demo.gif)
