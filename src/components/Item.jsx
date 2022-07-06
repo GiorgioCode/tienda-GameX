@@ -1,20 +1,7 @@
 import React from "react";
-import ItemCount from "./ItemCount";
-import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Item = ({ games }) => {
-  const onAdd = (qty) => {
-    toast.success(`Agregaste ${qty} unidad/es de ${games.nombre} al carrito!`, {
-      theme: "dark",
-      position: "top-center",
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-  };
   return (
     <div className="m-3 max-w-md mx-1 bg-slate-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
       <div className="md:flex">
@@ -35,13 +22,12 @@ const Item = ({ games }) => {
             Precio: $ {games.precio}
           </div>
 
-          <div>
-            <ItemCount stock={games.stock} initial={1} onAdd={onAdd} />
-          </div>
-          <button className="btn px-16 my-6 text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
-            {" "}
-            Ver mas
-          </button>
+          <Link to={`/detalle/${games.id}`}>
+            <button className="btn px-16 my-6 text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
+              {" "}
+              Ver mas
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ const DropCategoria = () => {
           </label>
           <h2>Filtrar por Categoria:</h2>
           <ul class="mt-3 p-2 text-black shadow w-full ">
-            <NavLink to={"/categoria/world"}>
+            <NavLink to={"/categoria/mundo_abierto"}>
               <li className="justify-between rounded-box p-2 text-center text-lg text-white hover:bg-red-500 hover:text-black hover:shadow-lg">
                 Mundo Abierto
               </li>
@@ -50,14 +50,24 @@ const DropCategoria = () => {
                 Carreras
               </li>
             </NavLink>
-            <NavLink to={"/categoria/fantasia"}>
+            <NavLink to={"/categoria/rpg"}>
               <li className="justify-between rounded-box p-2 text-center text-lg text-white hover:bg-red-500 hover:text-black hover:shadow-lg">
-                Fantasia
+                RPG
               </li>
             </NavLink>
             <NavLink to={"/categoria/plataforma"}>
               <li className="justify-between rounded-box p-2 text-center text-lg text-white hover:bg-red-500 hover:text-black hover:shadow-lg">
                 Plataforma
+              </li>
+            </NavLink>
+            <NavLink to={"/categoria/deportes"}>
+              <li className="justify-between rounded-box p-2 text-center text-lg text-white hover:bg-red-500 hover:text-black hover:shadow-lg">
+                Deportes
+              </li>
+            </NavLink>
+            <NavLink to={"/categoria/simulacion"}>
+              <li className="justify-between rounded-box p-2 text-center text-lg text-white hover:bg-red-500 hover:text-black hover:shadow-lg">
+                Simulacion
               </li>
             </NavLink>
           </ul>

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import ItemCount from "./ItemCount";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ data }) => {
+  const [agregado, setAgregado] = useState(false);
   const onAdd = (qty) => {
     toast.success(`Agregaste ${qty} unidad/es de ${data.nombre} al carrito!`, {
       theme: "dark",
@@ -15,6 +17,7 @@ const ItemDetail = ({ data }) => {
       draggable: true,
       progress: undefined,
     });
+    setAgregado(true);
   };
   return (
     <>
@@ -28,10 +31,9 @@ const ItemDetail = ({ data }) => {
           <span className="w-1/2">
             <div>Clasificación: {data.esrb} </div>
             <div>Duración: {data.tiempo} horas </div>
-            <div>Categoría: {data.categoria} </div>
             <div>Creador: {data.creador} </div>
           </span>
-          <div>
+          <div className="w-full">
             <h1 class="text-5xl font-bold bg-slate-900 m-1 rounded-md text-center py-2">
               {data.nombre}
             </h1>
@@ -52,7 +54,16 @@ const ItemDetail = ({ data }) => {
               Precio: $ {data.precio}
             </div>
             <div className="text-center py-2 text-3xl bg-slate-900 m-1 rounded-md">
-              <ItemCount stock={data.stock} initial={1} onAdd={onAdd} />
+              {agregado ? (
+                <Link to={"/cart"}>
+                  <button className="btn mx-0.5 w-30 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
+                    {" "}
+                    Finalizar Compra{" "}
+                  </button>
+                </Link>
+              ) : (
+                <ItemCount stock={data.stock} initial={1} onAdd={onAdd} />
+              )}
             </div>
           </div>
         </div>
