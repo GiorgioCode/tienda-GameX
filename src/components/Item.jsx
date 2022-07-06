@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const Item = ({ games }) => {
   return (
-    <div className="m-3 max-w-md mx-1 bg-slate-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-      <div className="md:flex">
-        <div className="md:shrink-0">
+    <div className="m-3 mx-1 bg-slate-900 rounded-xl shadow-md overflow-hidden max-w-2xl">
+      <div className="flex">
+        <div className="">
           <img
-            className="w-96 h-96 object-cover md:h-full md:w-48"
+            className="object-cover h-full w-48"
             src={games.imagen}
             alt="portada"
           />
         </div>
         <div className="p-8">
-          <div className=" text-white text-2xl text-center mb-3">
+          <div className=" text-white text-2xl text-center mb-3 w-44">
             {games.nombre}
           </div>
           <div className=" text-white mb-3"> Disponibles: {games.stock}</div>

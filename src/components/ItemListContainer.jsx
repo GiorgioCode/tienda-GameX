@@ -15,7 +15,7 @@ export const ItemListContainer = () => {
       setTimeout(() => {
         setCargando(false);
         resolve(games);
-      }, 2000); //segun consigna de filmina (2 segundos de espera)
+      }, 1000); //segun consigna de filmina (2 segundos de espera)
     });
 
     if (categoriaId) {
@@ -34,9 +34,11 @@ export const ItemListContainer = () => {
       </h1>
     </div>
   ) : (
-    <div className="d-flex inline-flex flex-wrap w-full justify-center mt-32">
-      <ItemList data={data} />
-    </div>
+    <>
+      <div className="d-flex inline-flex flex-wrap w-full justify-center mt-32">
+        <ItemList data={data} />
+      </div>
+    </>
   );
 };
 export default ItemListContainer;

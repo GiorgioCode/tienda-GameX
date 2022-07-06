@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.6d99ba88.css",
-    "main.js": "/static/js/main.288195d3.js",
+    "main.css": "/static/css/main.194c740d.css",
+    "main.js": "/static/js/main.f6849089.js",
     "static/js/787.0e97991e.chunk.js": "/static/js/787.0e97991e.chunk.js",
     "static/media/GameX-Logo.png": "/static/media/GameX-Logo.a23e71657217df4564f7.png",
     "index.html": "/index.html",
     "static/media/filter.svg": "/static/media/filter.3b097757311f1385e74052601c4924ef.svg",
-    "main.6d99ba88.css.map": "/static/css/main.6d99ba88.css.map",
-    "main.288195d3.js.map": "/static/js/main.288195d3.js.map",
+    "main.194c740d.css.map": "/static/css/main.194c740d.css.map",
+    "main.f6849089.js.map": "/static/js/main.f6849089.js.map",
     "787.0e97991e.chunk.js.map": "/static/js/787.0e97991e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d99ba88.css",
-    "static/js/main.288195d3.js"
+    "static/css/main.194c740d.css",
+    "static/js/main.f6849089.js"
   ]
 }
