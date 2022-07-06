@@ -1,4 +1,4 @@
-## ![Logo](https://raw.githubusercontent.com/GiorgioCode/tienda-GameX/main/src/GameX-Logo.png)
+![Logo](https://raw.githubusercontent.com/GiorgioCode/tienda-GameX/master/src/GameX-Logo.png)
 
 ## Tienda de venta de juegos realizada con React.js
 
@@ -18,7 +18,7 @@ En este proyecto se ha desarrollado una tienda de videojuegos con capacidad de f
 
 # Demo:
 
-![Demo](https://raw.githubusercontent.com/GiorgioCode/tienda-GameX/main/src/demo.gif)
+![Demo](https://raw.githubusercontent.com/GiorgioCode/tienda-GameX/master/src/demo.gif)
 
 ---
 
