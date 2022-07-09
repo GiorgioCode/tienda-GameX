@@ -5,7 +5,7 @@ import { useCartContext } from "../context/CartContext";
 const CartWidget = () => {
     const { totalProducts } = useCartContext();
     return (
-        <div className="flex-none">
+        <div className="flex-none tooltip tooltip-bottom" data-tip="Carrito">
             <NavLink to={"/cart"}>
                 <label
                     tabIndex="0"
@@ -35,5 +35,4 @@ const CartWidget = () => {
         </div>
     );
 };
-
 export default CartWidget;
