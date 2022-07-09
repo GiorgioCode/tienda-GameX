@@ -300,6 +300,7 @@ export const games = [
         video: "https://www.youtube.com/watch?v=eARa4PZn_aE",
     },
     {
+        ////////////////////////////**ACTUALIZADO HASTA ACA**////////////////////////////
         id: 22,
         nombre: "BATMAN Arkham City",
         creador: "",
