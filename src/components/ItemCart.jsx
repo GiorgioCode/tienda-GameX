@@ -2,7 +2,7 @@ import React from "react";
 import { useCartContext } from "../context/CartContext";
 
 const ItemCart = ({ product }) => {
-    const { removeItem } = useCartContext();
+    const { removeItem, plusProduct, sustProduct } = useCartContext();
     return (
         <div className="m-2 hover:shadow-red-600  mx-1 bg-slate-900 rounded-xl shadow-xl overflow-hidden max-w-2xl">
             <div className="flex">
@@ -19,6 +19,10 @@ const ItemCart = ({ product }) => {
                     </div>
                     <div className=" text-white mb-3">
                         {" "}
+                        Cantidad: {product.stock}
+                    </div>
+                    <div className=" text-white mb-3">
+                        {" "}
                         Cantidad Seleccionada: {product.cantidad}
                     </div>
                     <div className=" text-white mb-3">
@@ -30,11 +34,25 @@ const ItemCart = ({ product }) => {
                         Subtotal $ {product.cantidad * product.precio}
                     </div>
                     <button
-                        onClick={() => removeItem(product.id)}
-                        className="btn px-16 my-1 w-48 text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary"
+                        onClick={() => sustProduct(product.id)}
+                        className="btn my-1 px-6 w-3  text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary"
+                    >
+                        {" "}
+                        -
+                    </button>
+                    <button
+                        onClick={() => removeItem(product.id, product.stock)}
+                        className="btn px-16 my-1 w-3 text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary"
                     >
                         {" "}
                         Eliminar
+                    </button>
+                    <button
+                        onClick={() => plusProduct(product.id, product.stock)}
+                        className="btn my-1 px-6 w-3 text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary"
+                    >
+                        {" "}
+                        +
                     </button>
                 </div>
             </div>

@@ -27,6 +27,34 @@ const CartProvider = ({ children }) => {
         }
     };
 
+    const plusProduct = (id, stock) => {
+        let modificador = [...carrito];
+        let index = modificador.indexOf(id);
+        console.log(index);
+        let objeto = carrito.filter((juego) => juego.id === id);
+        console.log(objeto[0]);
+        if (objeto[0].cantidad < stock) {
+            objeto[0].cantidad = objeto[0].cantidad + 1;
+            console.log(objeto[0]);
+            modificador[index] = objeto[0];
+            setCarrito(modificador);
+        }
+    };
+
+    const sustProduct = (id) => {
+        let modificador = [...carrito];
+        let index = modificador.indexOf(id);
+        console.log(index);
+        let objeto = carrito.filter((juego) => juego.id === id);
+        console.log(objeto[0]);
+        if (objeto[0].cantidad > 1) {
+            objeto[0].cantidad = objeto[0].cantidad - 1;
+            console.log(objeto[0]);
+            modificador[index] = objeto[0];
+            setCarrito(modificador);
+        }
+    };
+
     const totalPrice = () => {
         return carrito.reduce(
             (acumulador, act) => acumulador + act.cantidad * act.precio,
@@ -46,6 +74,8 @@ const CartProvider = ({ children }) => {
                 addItem,
                 totalPrice,
                 totalProducts,
+                plusProduct,
+                sustProduct,
                 carrito,
             }}
         >
