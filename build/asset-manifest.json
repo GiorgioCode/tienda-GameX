@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.36fea871.css",
-    "main.js": "/static/js/main.d483e608.js",
+    "main.css": "/static/css/main.6d8d5b05.css",
+    "main.js": "/static/js/main.b2d726f8.js",
     "static/media/GameX-Logo.png": "/static/media/GameX-Logo.a23e71657217df4564f7.png",
     "static/media/carritoVacio.svg": "/static/media/carritoVacio.a95c944e4ed1b15f1e585f518429838f.svg",
     "index.html": "/index.html",
     "static/media/filter.svg": "/static/media/filter.3b097757311f1385e74052601c4924ef.svg",
-    "main.36fea871.css.map": "/static/css/main.36fea871.css.map",
-    "main.d483e608.js.map": "/static/js/main.d483e608.js.map"
+    "main.6d8d5b05.css.map": "/static/css/main.6d8d5b05.css.map",
+    "main.b2d726f8.js.map": "/static/js/main.b2d726f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.36fea871.css",
-    "static/js/main.d483e608.js"
+    "static/css/main.6d8d5b05.css",
+    "static/js/main.b2d726f8.js"
   ]
 }
