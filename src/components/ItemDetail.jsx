@@ -9,19 +9,19 @@ const ItemDetail = ({ data }) => {
     const [agregado, setAgregado] = useState(false);
     const { addItem } = useCartContext();
     const onAdd = (qty) => {
-        toast.success(
-            `Agregaste ${qty} unidad/es de ${data.nombre} al carrito!`,
-            {
-                theme: "dark",
-                position: "top-center",
-                autoClose: 1500,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            }
-        );
+        toast(`Agregaste ${qty} unidad/es de ${data.nombre} al carrito!`, {
+            theme: "dark",
+            position: "top-center",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            style: {
+                background: "linear-gradient(to right, #28344d, #9a1a23)",
+            },
+        });
         setAgregado(true);
         addItem(data, qty);
     };

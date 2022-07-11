@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ games }) => {
     return (
-        <div className="m-2 hover:shadow-red-600  mx-1 bg-slate-900 rounded-xl shadow-xl overflow-hidden max-w-2xl">
+        <div className="m-2 hover:shadow-red-600 w-96 h-1/3 mx-1 bg-slate-900 rounded-xl shadow-xl overflow-hidden max-w-2xl">
             <div className="flex">
                 <div className="shrink-0">
                     <img
@@ -13,7 +13,7 @@ const Item = ({ games }) => {
                     />
                 </div>
                 <div className="p-8">
-                    <div className="text-2xl text-center mt-0 mb-1 w-48 text-violet-600">
+                    <div className="text-2xl text-center mb-1 w-full  text-violet-600">
                         {games.nombre}
                     </div>
                     <div className=" text-white mb-3">
@@ -26,9 +26,9 @@ const Item = ({ games }) => {
                     </div>
 
                     <Link to={`/detalle/${games.id}`}>
-                        <button className="btn px-16 my-1 w-48 text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
+                        <button className="btn my-0.5 w-full text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
                             {" "}
-                            Ver mas
+                            ver mas
                         </button>
                     </Link>
                 </div>
