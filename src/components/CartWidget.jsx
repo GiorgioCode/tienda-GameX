@@ -3,8 +3,10 @@ import React from "react";
 import { useCartContext } from "../context/CartContext";
 
 const CartWidget = () => {
-    const { totalProducts } = useCartContext();
-    return (
+    const { totalProducts, carrito } = useCartContext();
+    return carrito.length === 0 ? (
+        <></>
+    ) : (
         <div className="flex-none tooltip tooltip-bottom" data-tip="Carrito">
             <NavLink to={"/cart"}>
                 <label
