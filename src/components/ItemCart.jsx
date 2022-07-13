@@ -41,6 +41,7 @@ const ItemCart = ({ product }) => {
                     </button>
                     <div>
                         <button
+                            disabled={product.cantidad <= 1}
                             onClick={() => sustProduct(product.id)}
                             className="btn my-1 px-6 w-3 mx-2  text-center btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary"
                         >
@@ -49,6 +50,7 @@ const ItemCart = ({ product }) => {
                         </button>
 
                         <button
+                            disabled={product.stock <= product.cantidad}
                             onClick={() =>
                                 plusProduct(product.id, product.stock)
                             }
