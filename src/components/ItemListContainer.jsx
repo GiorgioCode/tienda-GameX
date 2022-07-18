@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import { games } from "./listado";
 import LoaderPacman from "./LoaderPacman";
 import { useParams } from "react-router-dom";
+import {
+    getFirestore,
+    collection,
+    getDocs,
+    query,
+    where,
+} from "firebase/firestore";
 
 export const ItemListContainer = () => {
     const [data, setData] = useState([]);
@@ -11,23 +17,34 @@ export const ItemListContainer = () => {
     const { categoriaId } = useParams();
 
     useEffect(() => {
-        const getData = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(games);
-            }, 1500); //segun consigna de filmina (2 segundos de espera)
-        });
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb, "juegos");
 
         if (categoriaId) {
-            getData
+            const queryFilter = query(
+                queryCollection,
+                where("categoria", "==", categoriaId)
+            );
+            getDocs(queryFilter)
                 .then((res) =>
                     setData(
-                        res.filter((games) => games.categoria === categoriaId)
+                        res.docs.map((juego) => ({
+                            id: juego.id,
+                            ...juego.data(),
+                        }))
                     )
                 )
                 .finally(() => setCargando(false));
         } else {
-            getData
-                .then((res) => setData(res))
+            getDocs(queryCollection)
+                .then((res) =>
+                    setData(
+                        res.docs.map((juego) => ({
+                            id: juego.id,
+                            ...juego.data(),
+                        }))
+                    )
+                )
                 .finally(() => setCargando(false));
         }
     }, [categoriaId]);

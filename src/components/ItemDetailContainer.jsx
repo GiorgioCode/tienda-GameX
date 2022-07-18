@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import { games } from "./listado";
 import LoaderPacman from "./LoaderPacman";
 import { useParams } from "react-router-dom";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
     const [data, setData] = useState([]);
@@ -10,16 +10,10 @@ export const ItemDetailContainer = () => {
     const { detalleId } = useParams();
 
     useEffect(() => {
-        const getData = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(games);
-                setCargando(false);
-            }, 2000);
-        });
-        getData
-            .then((res) =>
-                setData(res.find((games) => games.id === parseInt(detalleId)))
-            )
+        const querydb = getFirestore();
+        const queryDoc = doc(querydb, "juegos", detalleId);
+        getDoc(queryDoc)
+            .then((res) => setData({ id: res.id, ...res.data() }))
             .finally(() => setCargando(false));
     }, [detalleId]);
 
