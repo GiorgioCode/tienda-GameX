@@ -1,4 +1,3 @@
-import { clear } from "@testing-library/user-event/dist/clear";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
@@ -56,7 +55,13 @@ const Cart = () => {
                     </li>
                 </ul>
                 <div className="d-flex text-center my-2">
-                    <button className="btn px-16 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
+                    <Link className="h-1/3" to={"/"}>
+                        <button className="btn mx-1 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
+                            {" "}
+                            Seguir eligiendo
+                        </button>
+                    </Link>
+                    <button className="btn mx-1 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
                         {" "}
                         Finalizar compra
                     </button>

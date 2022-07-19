@@ -1,5 +1,6 @@
 import React from "react";
 import { useCartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const ItemCart = ({ product }) => {
     const { removeItem, plusProduct, sustProduct } = useCartContext();
@@ -62,6 +63,15 @@ const ItemCart = ({ product }) => {
                     </div>
                 </div>
             </div>
+            <Link className="h-1/3" to={`/detalle/${product.id}`}>
+                <button
+                    onClick={() => removeItem(product.id, product.stock)}
+                    className="btn w-full text-center btn-outline  hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary"
+                >
+                    {" "}
+                    Ver detalles
+                </button>
+            </Link>
         </div>
     );
 };
