@@ -14,8 +14,8 @@ const ItemCart = ({ product }) => {
                         alt="portada"
                     />
                 </div>
-                <div className="p-8">
-                    <div className="text-2xl text-center mb-1 w-full  text-violet-600">
+                <div className="p-3">
+                    <div className="text-2xl text-center w-full  text-violet-600">
                         {product.nombre}
                     </div>
                     <div className=" text-white mb-1">
