@@ -4,9 +4,9 @@ import { useCartContext } from "../context/CartContext";
 const ItemCart = ({ product }) => {
     const { removeItem, plusProduct, sustProduct } = useCartContext();
     return (
-        <div className="m-2 hover:shadow-red-600 w-96 mx-1 h-1/3 bg-slate-900 rounded-xl shadow-xl overflow-hidden max-w-2xl">
+        <div className="m-2 hover:shadow-red-600 w-96 mx-1 bg-slate-900 rounded-xl shadow-xl overflow-hidden max-w-2xl">
             <div className="flex">
-                <div className="shrink-0 w-48">
+                <div className="shrink-0 w-48 h-96">
                     <img
                         className="object-cover h-full"
                         src={product.imagen}
@@ -17,19 +17,19 @@ const ItemCart = ({ product }) => {
                     <div className="text-2xl text-center mb-1 w-full  text-violet-600">
                         {product.nombre}
                     </div>
-                    <div className=" text-white mb-3">
+                    <div className=" text-white mb-1">
                         {" "}
                         Stock: {product.stock}
                     </div>
-                    <div className=" text-white mb-3">
+                    <div className=" text-white mb-1">
                         {" "}
                         Cantidad: {product.cantidad}
                     </div>
-                    <div className=" text-white mb-3">
+                    <div className=" text-white mb-1">
                         {" "}
                         Precio: $ {product.precio}
                     </div>
-                    <div className="text-4xl text-left py-1 text-orange-600">
+                    <div className="text-4xl text-center text-orange-600">
                         <span>${product.cantidad * product.precio}</span>
                     </div>
                     <button

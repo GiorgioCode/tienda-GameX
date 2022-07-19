@@ -102,7 +102,7 @@ const ItemDetail = ({ data }) => {
                                 <Link to={"/cart"}>
                                     <button className="btn mx-0.5 w-30 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
                                         {" "}
-                                        Finalizar Compra{" "}
+                                        Ir al Carrito{" "}
                                     </button>
                                 </Link>
                             ) : (

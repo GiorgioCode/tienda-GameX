@@ -6,7 +6,7 @@ import ItemCart from "./ItemCart";
 import carritoVacio from "./carritoVacio.svg";
 
 const Cart = () => {
-    const { carrito, totalPrice } = useCartContext();
+    const { carrito, totalPrice, totalProducts } = useCartContext();
 
     if (carrito.length === 0) {
         return (
@@ -35,9 +35,33 @@ const Cart = () => {
 
     return (
         <>
-            <h2 className="mt-32 text-center text-3xl">
-                Precio total: $ {totalPrice()}
-            </h2>
+            <div className="mt-32 border-4 m-2 mx-8 sm:mx-32 rounded-lg p-3 bg-slate-900">
+                <h2 className="text-2xl text-start underline-offset-4 ">
+                    Resumen:
+                </h2>
+                <ul className="text-lg text-start">
+                    <li>
+                        Cantidad de items:
+                        <span className="text-3xl text-orange-400">
+                            {" "}
+                            {totalProducts()}
+                        </span>
+                    </li>
+                    <li>
+                        Total de la compra:
+                        <span className="text-3xl text-orange-400">
+                            {" "}
+                            $ {totalPrice()}
+                        </span>
+                    </li>
+                </ul>
+                <div className="d-flex text-center my-2">
+                    <button className="btn px-16 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
+                        {" "}
+                        Finalizar compra
+                    </button>
+                </div>
+            </div>
             <div className="d-flex inline-flex flex-wrap w-full justify-center mb-32">
                 {carrito.map((product) => (
                     <ItemCart key={product.id} product={product} />
