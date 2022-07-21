@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e7831c0a.css",
-    "main.js": "/static/js/main.0d8301ba.js",
+    "main.css": "/static/css/main.55d2adc0.css",
+    "main.js": "/static/js/main.92588dc4.js",
     "static/media/GameX-Logo.png": "/static/media/GameX-Logo.a23e71657217df4564f7.png",
-    "static/media/carritoVacio.svg": "/static/media/carritoVacio.a95c944e4ed1b15f1e585f518429838f.svg",
+    "static/media/empty_cart.svg": "/static/media/empty_cart.cdb871ca364de7ff49b1dd9805e3569d.svg",
+    "static/media/payment.svg": "/static/media/payment.5160ddb882ff9e6a68edb5db0836dc7a.svg",
+    "static/media/warning.svg": "/static/media/warning.cdf98446fb3eebfbade0df14f98c9fc9.svg",
     "index.html": "/index.html",
     "static/media/filter.svg": "/static/media/filter.3b097757311f1385e74052601c4924ef.svg",
-    "main.e7831c0a.css.map": "/static/css/main.e7831c0a.css.map",
-    "main.0d8301ba.js.map": "/static/js/main.0d8301ba.js.map"
+    "main.55d2adc0.css.map": "/static/css/main.55d2adc0.css.map",
+    "main.92588dc4.js.map": "/static/js/main.92588dc4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7831c0a.css",
-    "static/js/main.0d8301ba.js"
+    "static/css/main.55d2adc0.css",
+    "static/js/main.92588dc4.js"
   ]
 }

@@ -1,6 +1,5 @@
 body {
     background-color: #28344d;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

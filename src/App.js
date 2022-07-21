@@ -9,6 +9,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CartProvider from "./context/CartContext";
 import Categoria from "./components/Categoria";
+import Checkout from "./components/Checkout";
+import PaginaNoEncontrada from "./components/PaginaNoEncontrada";
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
                         <Route path="/categoria/" element={<Categoria/>}/>
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
+                        <Route path="/checkout/" element={<Checkout />} />
+                        <Route path="*" element={<PaginaNoEncontrada />} />
                     </Routes>
                 </CartProvider>
                 <Footer />
