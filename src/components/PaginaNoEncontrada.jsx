@@ -1,12 +1,15 @@
 import React from "react";
-import warning from "./warning.svg";
 import { Link } from "react-router-dom";
 
 const PaginaNoEncontrada = () => {
     return (
         <div>
             <div className="mt-32 d-flex inline-flex flex-wrap w-full justify-center">
-                <img className="" src={warning} alt="carrito vacio" />
+                <img
+                    className=""
+                    src="https://firebasestorage.googleapis.com/v0/b/gamex-store.appspot.com/o/warning.svg?alt=media&token=85ce7ff4-0302-4d86-810b-fa32be5e0234"
+                    alt="carrito vacio"
+                />
             </div>
             <h2 className="text-center text-3xl">
                 Disculpa, la pagina que buscas no se encuentra disponible

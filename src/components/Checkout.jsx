@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import TablaCarrito from "./TablaCarrito";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
-import ResumenCompra from "./ResumenCompra";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
+import FinalCompra from "./FinalCompra";
 
 const Checkout = () => {
     const { carrito, totalPrice, totalProducts, clear } = useCartContext();
@@ -102,48 +102,11 @@ const Checkout = () => {
         return (
             <div>
                 {orderId != null ? (
-                    <div className="self-auto w-full mt-32 text-3xl text-center h-screen">
-                        <h3 className="font-bold text-center text-orange-400">
-                            ¡Muchas gracias por tu compra!
-                        </h3>
-                        <p className="text-center m-4 text-orange">
-                            te compartimos tus datos de compra para consultas o
-                            reclamos:
-                        </p>
-                        <p className="text-center m-10 bg-slate-900 rounded-xl ">
-                            <ul>
-                                <li>
-                                    <span className="text-orange-600 underline">
-                                        nombre del comprador:
-                                    </span>
-                                    <br></br>
-                                    {name}
-                                </li>
-                                <li>
-                                    {" "}
-                                    <span className="text-orange-600 underline">
-                                        Email del comprador:
-                                    </span>
-                                    <br></br>
-                                    {correo}
-                                </li>
-                                <li>
-                                    {" "}
-                                    <span className="text-orange-600 underline">
-                                        ID de la compra:
-                                    </span>
-                                    <br></br>
-                                    {orderId}
-                                </li>
-                            </ul>
-                        </p>
-                        <Link to={"/"}>
-                            <button className="btn mx-1 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
-                                {" "}
-                                Volver al catalogo
-                            </button>
-                        </Link>
-                    </div>
+                    <FinalCompra
+                        name={name}
+                        correo={correo}
+                        orderId={orderId}
+                    />
                 ) : (
                     <div className="border-4 mt-32 rounded-lg p-3 bg-slate-900 mb-6">
                         <div className="d-flex text-center my-2">

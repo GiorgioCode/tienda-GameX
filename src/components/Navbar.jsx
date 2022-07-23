@@ -3,7 +3,6 @@ import CartWidget from "./CartWidget";
 import Dropdown from "./Dropdown";
 import { NavLink } from "react-router-dom";
 import DropCategoria from "./DropCategoria";
-import logo from "../GameX-Logo.png";
 
 const Navbar = () => {
     return (
@@ -14,7 +13,11 @@ const Navbar = () => {
                         to={"/"}
                         className="btn bg-slate-900 text-xl h-20 border-hidden hover:bg-slate-900"
                     >
-                        <img className="h-20" src={logo} alt="logo" />
+                        <img
+                            className="h-20"
+                            src="https://firebasestorage.googleapis.com/v0/b/gamex-store.appspot.com/o/GameX-Logo.png?alt=media&token=7b327faf-1161-4da1-9680-d3114cb53bdd"
+                            alt="logo"
+                        />
                     </NavLink>
                 </div>
                 <div className="gap-2">
