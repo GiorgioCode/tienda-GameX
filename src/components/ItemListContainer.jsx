@@ -57,7 +57,7 @@ export const ItemListContainer = () => {
         </div>
     ) : (
         <>
-            <div className="d-flex inline-flex flex-wrap w-full justify-center mt-32">
+            <div className="d-flex inline-flex flex-wrap w-full justify-center mt-32 min-h-screen">
                 <ItemList data={data} />
             </div>
         </>

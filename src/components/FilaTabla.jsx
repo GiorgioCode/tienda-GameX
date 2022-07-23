@@ -3,9 +3,11 @@ import React from "react";
 const ItemCart = ({ product }) => {
     return (
         <tr>
-            <td>{product.cantidad}</td>
-            <td>{product.nombre}</td>
-            <td>$ {product.cantidad * product.precio}</td>
+            <td className="text-center">{product.cantidad}</td>
+            <td className="text-center">{product.nombre}</td>
+            <td className="text-center">
+                $ {product.cantidad * product.precio}
+            </td>
         </tr>
     );
 };

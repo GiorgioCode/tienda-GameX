@@ -12,7 +12,6 @@ import Categoria from "./components/Categoria";
 import Checkout from "./components/Checkout";
 import PaginaNoEncontrada from "./components/PaginaNoEncontrada";
 
-
 const App = () => {
     return (
         <>

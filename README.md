@@ -12,8 +12,23 @@
 
 -   TailwindCSS
 -   DaisyUI
--   Biblioteca de Videojuegos RAWG.io
 -   Firebase (Storage y Cloud Firestore)
+-   Libreria React-credit-cards
+
+---
+
+# Tareas realizadas
+
+-   Se implementó uso de LocalStorage para almacenamiento y actualizacion local del carrito
+-   Se realizó el desarrollo teniendo en cuenta diseño responsive
+-   Se implementó filtrado por categorias
+-   El proyecto fue desarrollado como una SPA, utilizando ReactRouter para realizar las rutas.
+-   Se implementó tratamiento de ERROR 404 con pagina personalizada con vinculo a la pagina principal.
+-   Se utiliza un loader personalizado (pacman) mientras las paginas cargan los componentes.
+-   Se desarrolló una tabla de resumen de compra.
+-   En la vista de carrito, se implementó la funcion de poder modificar cantidades de los objetos seleccionados, modificandose tambien los precios de subtotales tanto en la tarjeta de selección como en la table de resumen.
+-   En la vista Checkout, se implemento un sistema de verificacion de tarjeta de credito.
+-
 
 ---
 

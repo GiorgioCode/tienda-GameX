@@ -1,9 +1,10 @@
-import React, { useState, useContext } from "react";
+import { useLocalStorage } from "../components/useLocalStorage";
+import React, { useContext } from "react";
 const CartContext = React.createContext([]);
 export const useCartContext = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
-    const [carrito, setCarrito] = useState([]);
+    const [carrito, setCarrito] = useLocalStorage("carrito", []);
 
     const clear = () => setCarrito([]);
 
@@ -55,6 +56,14 @@ const CartProvider = ({ children }) => {
     const totalProducts = () =>
         carrito.reduce((acumulador, juego) => acumulador + juego.cantidad, 0);
 
+    const subTotal = () => {
+        return carrito.reduce(
+            (subtotal, current) =>
+                subtotal + current.item.precio * current.quantity,
+            0
+        );
+    };
+
     return (
         <CartContext.Provider
             value={{
@@ -67,6 +76,7 @@ const CartProvider = ({ children }) => {
                 plusProduct,
                 sustProduct,
                 carrito,
+                subTotal,
             }}
         >
             {children}
