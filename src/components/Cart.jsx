@@ -10,8 +10,8 @@ const Cart = () => {
 
     if (carrito.length === 0) {
         return (
-            <div className="h-screen">
-                <div className="border-4 mt-32 rounded-lg p-3 bg-slate-900">
+            <div className="h-screen pt-36">
+                <div className="border-4 rounded-lg p-4 bg-slate-900">
                     <h2 className="text-2xl text-start underline-offset-4 ">
                         El carrito se encuentra vacio, por favor visita nuestro
                         catalogo para elegir un producto.
@@ -30,8 +30,8 @@ const Cart = () => {
     }
 
     return (
-        <>
-            <div className="mt-32 sm:mx-32 rounded-lg sm:p-3 bg-slate-900">
+        <div className="pt-36">
+            <div className=" p-2 sm:mx-32 rounded-lg sm:p-3 bg-slate-900">
                 <ResumenCompra productos={carrito} />
                 <div className="d-flex text-center my-2">
                     <Link className="h-1/3" to={"/"}>
@@ -54,7 +54,7 @@ const Cart = () => {
                     <ItemCart key={product.id} product={product} />
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 
