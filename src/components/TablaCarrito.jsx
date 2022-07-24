@@ -14,17 +14,17 @@ const TablaCarrito = ({ productos }) => {
 
     return (
         <div class="">
-            <table class="table w-full overflow-hidden">
+            <table class="table-auto w-full overflow-hidden">
                 <thead>
                     <tr>
-                        <th className="text-center  bg-slate-800 text-white">
-                            Cant.
+                        <th className="text-center  bg-slate-800 text-white p-1">
+                            CANT.
                         </th>
-                        <th className="text-center  bg-slate-800 text-white">
-                            juego
+                        <th className="text-center  bg-slate-800 text-white p-1">
+                            DETALLE
                         </th>
-                        <th className="text-center  bg-slate-800 text-white">
-                            $
+                        <th className="text-center  bg-slate-800 text-white p-1">
+                            PRECIO
                         </th>
                     </tr>
                 </thead>
@@ -35,11 +35,11 @@ const TablaCarrito = ({ productos }) => {
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th className="text-orange-600 text-xl  text-center  bg-slate-800 text-white">
+                        <th className="text-orange-600 text-xl  text-center  bg-slate-800 p-1">
                             {totalProductos()}
                         </th>
-                        <th className="text-orange-600 text-xl  text-center  bg-slate-800 text-white"></th>
-                        <th className="text-green-600 text-xl text-center  bg-slate-800 text-white">
+                        <th className="text-orange-600 text-xl  text-center  bg-slate-800 p-1"></th>
+                        <th className="text-green-600 text-xl text-center  bg-slate-800 p-1">
                             $ {totalPrecio()}
                         </th>
                     </tr>

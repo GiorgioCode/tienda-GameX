@@ -7,13 +7,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDp7Gb5JnQIsT-gMtoD5yNbue-WiEppr6M",
-  authDomain: "gamex-store.firebaseapp.com",
-  projectId: "gamex-store",
-  storageBucket: "gamex-store.appspot.com",
-  messagingSenderId: "1055909179866",
-  appId: "1:1055909179866:web:90659ff109da5587b990e3",
-  measurementId: "G-DYD63YLJEZ"
+  apiKey: process.env.ENV_apyKey,
+  authDomain: process.env.ENV_authDomain,
+  projectId: process.env.ENV_projectId,
+  storageBucket: process.env.ENV_storageBucket,
+  messagingSenderId: process.env.ENV_messagingSenderId,
+  appId: process.env.ENV_appId,
+  measurementId: process.env.ENV_measurementId
 };
 
 // Initialize Firebase

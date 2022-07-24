@@ -108,8 +108,8 @@ const Checkout = () => {
                         orderId={orderId}
                     />
                 ) : (
-                    <div className="border-4 mt-32 rounded-lg mx-0 bg-slate-900 mb-6">
-                        <div className="d-flex text-center my-2">
+                    <div className="border-4 mt-32 rounded-lg bg-slate-900 mb-6">
+                        <div className="d-flex text-center my-2 w-full">
                             <Link className="h-1/3" to={"/cart/"}>
                                 <button className="btn mx-1 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
                                     {" "}
@@ -118,9 +118,9 @@ const Checkout = () => {
                             </Link>
                         </div>
 
-                        <div className=" shadow-2xl">
-                            <div className="hero-content flex-col lg:flex-row-reverse w-full">
-                                <div className="text-center">
+                        <div className="shadow-2xl justify-center w-full">
+                            <div className=" hero-content flex-col flex lg:flex-row-reverse">
+                                <div className="text-center ">
                                     <div className="my-4">
                                         <TablaCarrito productos={carrito} />
                                     </div>
@@ -132,8 +132,8 @@ const Checkout = () => {
                                         focused={focus}
                                     />
                                 </div>
-                                <div className="card flex-shrink-0 shadow-2xl ">
-                                    <div className="card-body">
+                                <div className="text-center flex w-3/5">
+                                    <div className="card w-full">
                                         <form className="form-control">
                                             <input
                                                 className="input input-bordered  bg-slate-800 text-white"
