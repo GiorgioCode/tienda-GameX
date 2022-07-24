@@ -31,7 +31,7 @@ const Cart = () => {
 
     return (
         <>
-            <div className="mt-32 border-4 m-2 mx-8 sm:mx-32 rounded-lg p-3 bg-slate-900">
+            <div className="mt-32 sm:mx-32 rounded-lg sm:p-3 bg-slate-900">
                 <ResumenCompra productos={carrito} />
                 <div className="d-flex text-center my-2">
                     <Link className="h-1/3" to={"/"}>

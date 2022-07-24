@@ -108,7 +108,7 @@ const Checkout = () => {
                         orderId={orderId}
                     />
                 ) : (
-                    <div className="border-4 mt-32 rounded-lg p-3 bg-slate-900 mb-6">
+                    <div className="border-4 mt-32 rounded-lg mx-0 bg-slate-900 mb-6">
                         <div className="d-flex text-center my-2">
                             <Link className="h-1/3" to={"/cart/"}>
                                 <button className="btn mx-1 btn-outline rounded-full circle hover:bg-primary bg-slate-900 text-white hover:text-white hover:shadow-lg hover:shadow-primary">
@@ -118,8 +118,8 @@ const Checkout = () => {
                             </Link>
                         </div>
 
-                        <div className="hero shadow-2xl">
-                            <div className="hero-content flex-col lg:flex-row-reverse">
+                        <div className=" shadow-2xl">
+                            <div className="hero-content flex-col lg:flex-row-reverse w-full">
                                 <div className="text-center">
                                     <div className="my-4">
                                         <TablaCarrito productos={carrito} />
@@ -132,11 +132,11 @@ const Checkout = () => {
                                         focused={focus}
                                     />
                                 </div>
-                                <div className="card flex-shrink-0 w-full shadow-2xl ">
+                                <div className="card flex-shrink-0 shadow-2xl ">
                                     <div className="card-body">
                                         <form className="form-control">
                                             <input
-                                                className="input input-bordered"
+                                                className="input input-bordered  bg-slate-800 text-white"
                                                 type="tel"
                                                 name="number"
                                                 placeholder="Numero de la Tarjeta"
@@ -149,7 +149,7 @@ const Checkout = () => {
                                                 }
                                             />
                                             <input
-                                                className="input input-bordered"
+                                                className="input input-bordered bg-slate-800 text-white"
                                                 type="text"
                                                 name="name"
                                                 placeholder="Nombre y Apellido (impreso en tarjeta)"
@@ -162,7 +162,7 @@ const Checkout = () => {
                                                 }
                                             />
                                             <input
-                                                className="input input-bordered"
+                                                className="input input-bordered bg-slate-800 text-white"
                                                 type="text"
                                                 name="expiry"
                                                 placeholder="MM/YY Vencimiento"
@@ -175,7 +175,7 @@ const Checkout = () => {
                                                 }
                                             />
                                             <input
-                                                className="input input-bordered"
+                                                className="input input-bordered bg-slate-800 text-white"
                                                 type="tel"
                                                 name="cvc"
                                                 placeholder="CVC"
@@ -197,7 +197,7 @@ const Checkout = () => {
                                             <input
                                                 type="text"
                                                 placeholder="Correo electrónico"
-                                                className="input input-bordered"
+                                                className="input input-bordered  bg-slate-800 text-white"
                                                 onChange={(event) => {
                                                     setCorreo(
                                                         event.target.value
@@ -220,7 +220,7 @@ const Checkout = () => {
                                                 <input
                                                     type="text"
                                                     placeholder="Ingrese nuevamente el correo electrónico"
-                                                    className="input input-bordered"
+                                                    className="input input-bordered  bg-slate-800 text-white"
                                                     onChange={(event) => {
                                                         setVerifCorreo(
                                                             event.target.value

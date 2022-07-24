@@ -7,7 +7,7 @@ const ItemCart = ({ product }) => {
     return (
         <div className="m-2 hover:shadow-red-600 w-96 mx-1 bg-slate-900 rounded-xl shadow-xl overflow-hidden max-w-2xl">
             <div className="flex">
-                <div className="shrink-0 w-48 h-96">
+                <div className="shrink-0 w-32 sm:w-48 h-96">
                     <img
                         className="object-cover h-full"
                         src={product.imagen}
