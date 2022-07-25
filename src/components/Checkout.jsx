@@ -2,7 +2,12 @@ import React from "react";
 import { useCartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import TablaCarrito from "./TablaCarrito";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import {
+    addDoc,
+    collection,
+    getFirestore,
+    serverTimestamp,
+} from "firebase/firestore";
 import { useState } from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
@@ -33,15 +38,16 @@ const Checkout = () => {
             numero_tarjeta: number,
             expiracion_tarjeta: expiry,
             cvc_tarjeta: cvc,
+            fecha_hora: serverTimestamp(),
         },
+        total: totalPrice(),
+        cantidad_productos: totalProducts(),
         items: carrito.map((juego) => ({
             id: juego.id,
             nombre: juego.nombre,
             precio: juego.precio,
             cantidad: juego.cantidad,
         })),
-        total: totalPrice(),
-        cantidad_productos: totalProducts(),
     };
 
     const expr =
@@ -102,11 +108,13 @@ const Checkout = () => {
         return (
             <div>
                 {orderId != null ? (
-                    <FinalCompra
-                        name={name}
-                        correo={correo}
-                        orderId={orderId}
-                    />
+                    <div className="self-auto w-full mt-32 text-3xl text-center h-screen">
+                        <FinalCompra
+                            name={name}
+                            correo={correo}
+                            orderId={orderId}
+                        />
+                    </div>
                 ) : (
                     <div className="border-4 mt-32 rounded-lg bg-slate-900 mb-6">
                         <div className="d-flex text-center my-2 w-full">
